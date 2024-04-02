@@ -34,6 +34,8 @@ If changes are made to the code and the command needs to be run again, run the f
 ### 6. Browse to site
 Use a browser and navigate to the app https://stg[suffix]1234.z1.web.core.windows.net/browser 
 
+![Static app in storage account ver 1](img1.png)
+
 ### 7. Create a Azure Front Door (AFD) service in front of the storageaccount
 Create a Azure Front Door service with the following configuration using bicep
 * origin group
@@ -48,11 +50,15 @@ Open main.bicep and set the "deployafd" parameter to true, navigate to the bicep
 ### 8. Browse to site through AFD
 Use a browser and navigate to the app using the afd endpoint address. Get the endpoint address through the Azure portal, copy the "Endpoint hostname" https://ep-[suffix]-[generated letters].b01.azurefd.net
 
+![Static app in storage account ver 2](img2.png)
+
 
 ### 9. Deploy Web Application Firewall (WAF) policies
 Open main.bicep and set the "deploywaf" parameter to true, navigate to the bicep folder and run the command.
 
 `` az deployment group create -g rg-[suffix] -f main.bicep``
+
+![Static app in storage account ver 3](img3.png)
 
 ### 10. Add API in API Management (APIM)
 Go to the Azure portal and find the API Management instance "apim-[suffix]. Goto "APIs", choose OpenAPI, click on "Select a file", choose the file "swapi.json" in the bicep folder, enter "swapi" as the API URL suffix, click Create. 
@@ -84,8 +90,10 @@ Set the "deployruleset" parameter to true and run the command.
 
 `` az deployment group create -g rg-[suffix] -f main.bicep`` 
 
-### 12. Test the api through AFD
+### 13. Test the api through AFD
 
 Use a browser or a REST client and navigate to https://ep-[suffix]-[generated letters].b01.azurefd.net/api/people/1
+
+![Static app in storage account ver 4](img4.png)
 
 
