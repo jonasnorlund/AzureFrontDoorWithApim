@@ -48,7 +48,7 @@ Open main.bicep and set the "deployafd" parameter to true, navigate to the bicep
 `` az deployment group create -g rg-[suffix] -f main.bicep``
 
 ### 8. Browse to site through AFD
-Use a browser and navigate to the app using the afd endpoint address. Get the endpoint address through the Azure portal, copy the "Endpoint hostname" https://ep-[suffix]-[generated letters].b01.azurefd.net
+Use a browser and navigate to the app using the afd endpoint address. Get the endpoint address through the Azure portal, copy the "Endpoint hostname" https://ep-[suffix]-[generatedletters].b01.azurefd.net
 
 ![Static app in storage account ver 2](img2.png)
 
@@ -71,7 +71,7 @@ Open main.bicep and set the "deployapi" parameter to true, navigate to the bicep
 
 `` az deployment group create -g rg-[suffix] -f main.bicep``
 
-Use a browser or a REST client and navigate to https://ep-[suffix]-[generated letters].b01.azurefd.net/api/people/1 
+Use a browser or a REST client and navigate to https://ep-[suffix]-[generatedletters].b01.azurefd.net/api/people/1 
 
 It fails, check the logs in log analytics, check the value in the field "originUrl_s". 
 
@@ -92,7 +92,7 @@ Set the "deployruleset" parameter to true and run the command.
 
 ### 13. Test the api through AFD
 
-Use a browser or a REST client and navigate to https://ep-[suffix]-[generated letters].b01.azurefd.net/api/people/1
+Use a browser or a REST client and navigate to https://ep-[suffix]-[generatedletters].b01.azurefd.net/api/people/1
 
 ![Static app in storage account ver 4](img4.png)
 
