@@ -1,0 +1,9 @@
+
+
+@apikey=[apikey from APIM]
+
+https://apim-[suffix].azure-api.net/swapi/api/films?subscription-key={{apikey}}
+
+###
+https://ep-[suffix]-gqd2f2gagzfdg7hg.b01.azurefd.net/api/people/1
+
